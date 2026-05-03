@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - E-Library</title>
+  <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+ <nav>
+  <h1><i class="fa-solid fa-book"></i> E-Library</h1>
+
+  <ul>
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="books.html" class="active"><i class="fa-solid fa-book-open"></i> Books</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+    <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Register</a></li>
+    <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+  </ul>
+</nav>
+
+  <!-- About Section -->
+  <section class="about-container" style="padding: 40px 20px; max-width: 900px; margin: auto; text-align: center;">
+    <h2>About E-Library</h2>
+    <p style="margin: 20px 0; font-size: 18px; line-height: 1.6;">
+      E-Library is your online destination for discovering, reading, and downloading a wide range of books from various genres.  
+      Our mission is to make knowledge and literature accessible anytime, anywhere.
+    </p>
+
+    <h3>Our Mission</h3>
+    <p style="margin: 15px 0; font-size: 16px; line-height: 1.5;">
+      To empower readers by providing a digital platform where they can explore books with ease and convenience.  
+      We aim to support lifelong learning and make reading enjoyable for everyone.
+    </p>
+
+    <h3>Our Team(Group14)</h3>
+    <div class="team-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
+      <div class="team-member" style="background:#fff; padding:15px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); width:200px;">
+        <img src="images/team1.png" alt="Team Member 1" style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <h4>John Doe</h4>
+        <p>TeamMember1</p>
+      </div>
+
+      <div class="team-member" style="background:#fff; padding:15px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); width:200px;">
+        <img src="images/team2.png" alt="Team Member 2" style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <h4>Jane Smith</h4>
+        <p>TeamMember2</p>
+      </div>
+
+      <div class="team-member" style="background:#fff; padding:15px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); width:200px;">
+        <img src="images/team3.png" alt="Team Member 3" style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <h4>Mike Johnson</h4>
+        <p>TeamMember3</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; <span id="year"></span> E-Library. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books - E-Library</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+
+    /* ===== FILTER UI (REDESIGNED) ===== */
+    .filters {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 25px 0;
+    }
+
+    .filter-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      padding: 10px 12px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .filter-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.12);
+    }
+
+    .filter-box i {
+      color: #2c3e50;
+      font-size: 14px;
+    }
+
+    .filter-box input,
+    .filter-box select {
+      border: none;
+      outline: none;
+      font-size: 14px;
+      background: transparent;
+      min-width: 140px;
+    }
+
+    .filter-box select {
+      cursor: pointer;
+    }
+
+    /* ===== BOOK GRID ===== */
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .book-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .book-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .book-card h4 {
+      margin-bottom: 5px;
+    }
+
+    .book-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .book-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #2c3e50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    .book-card a:hover {
+      background: #34495e;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h1><i class="fa-solid fa-book"></i> E-Library</h1>
+
+  <ul>
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="books.html" class="active"><i class="fa-solid fa-book-open"></i> Books</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a></li>
+    <li><a href="register.html"><i class="fa-solid fa-user-plus"></i> Register</a></li>
+    <li><a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+  </ul>
+</nav>
+
+<!-- BOOKS SECTION -->
+<section class="featured">
+
+  <h3 style="text-align:center;">All Books</h3>
+
+  <!-- ===== FILTER UI (NO LOGIC) ===== -->
+  <div class="filters">
+
+    <div class="filter-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="Search books...">
+    </div>
+
+    <div class="filter-box">
+      <i class="fa-solid fa-layer-group"></i>
+      <select>
+        <option>All Categories</option>
+        <option>Programming</option>
+        <option>Science</option>
+        <option>History</option>
+        <option>AI</option>
+        <option>Crypto</option>
+      </select>
+    </div>
+
+    <div class="filter-box">
+      <i class="fa-solid fa-user"></i>
+      <input type="text" placeholder="Author name...">
+    </div>
+
+    <div class="filter-box">
+      <i class="fa-solid fa-calendar"></i>
+      <input type="number" placeholder="Year (e.g. 2020)">
+    </div>
+
+  </div>
+
+  <!-- BOOK GRID -->
+  <div class="book-grid">
+
+    <div class="book-card">
+      <img src="images/r.jpg">
+      <h4>R Programming</h4>
+      <p>Abdul Ahmed</p>
+      <a href="#">View Details</a>
+    </div>
+
+    <div class="book-card">
+      <img src="images/Iot2.jpg">
+      <h4>Internet of Things</h4>
+      <p>Russell Norris</p>
+      <a href="#">View Details</a>
+    </div>
+
+    <div class="book-card">
+      <img src="images/trump.jpg">
+      <h4>GeoPolitics</h4>
+      <p>James Faith</p>
+      <a href="#">View Details</a>
+    </div>
+
+    <div class="book-card">
+      <img src="images/python.jpg">
+      <h4>Python Programming</h4>
+      <p>Sarah</p>
+      <a href="#">View Details</a>
+    </div>
+
+    <div class="book-card">
+      <img src="images/ai.jpg">
+      <h4>Artificial Intelligence</h4>
+      <p>Harry Josco</p>
+      <a href="#">View Details</a>
+    </div>
+
+    <div class="book-card">
+      <img src="images/dismath.jpg">
+      <h4>Discrete Math</h4>
+      <p>Fred Donald</p>
+      <a href="#">View Details</a>
+    </div>
+
+
+    <div class="book-card"> <img src="images/biology.jpg" alt="Internet of Things Basics Book"> <h4>Biology</h4> <p>Louis</p> <a href="book2.html">View Details</a> </div> 
+    <!-- Book 3 --> <div class="book-card"> <img src="images/aerospaceng.jpg" alt="Geopolitics Book"> <h4>AeroSpaceEng</h4> <p>Wolf</p> <a href="book3.html">View Details</a> </div>
+      <!-- Book 4 --> <div class="book-card"> <img src="images/crypto.jpg" alt="Python Programming Book"> <h4>Crypto World</h4> <p>Peter</p> <a href="book4.html">View Details</a> </div> 
+       <!-- Book 5 --> <div class="book-card"> <img src="images/religion.jpg" alt="Artificial Intelligence Book"> <h4>Religion</h4> <p>Arthur</p> <a href="book5.html">View Details</a> </div> 
+        <!-- Book 6 --> <div class="book-card"> <img src="images/webdev.jpg" alt="Blockchain Basics Book"> <h4>WebDev</h4> <p>Edgar</p> <a href="book6.html">View Details</a> </div> 
+        <!-- Book 1 --> <div class="book-card"> <img src="images/socialmedia.jpg" alt="C# Programming Book"> <h4>socialmedia</h4> <p>Anita</p> <a href="book1.html">View Details</a> </div>
+          <!-- Book 2 --> <div class="book-card"> <img src="images/hitler.jpg" alt="C# Programming Book"> <h4>History</h4> <p>Arthur Keneddy</p> <a href="book1.html">View Details</a> </div>
+
+
+
+
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer style="text-align:center; padding:20px;">
+  &copy; <span id="year"></span> E-Library
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

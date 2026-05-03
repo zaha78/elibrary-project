@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Details - E-Library</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* BOOK SECTION */
+    .book-details {
+      padding: 40px 20px;
+    }
+
+    .details-card {
+      display: flex;
+      gap: 30px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .details-image img {
+      width: 250px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .details-info h2 {
+      margin-bottom: 10px;
+    }
+
+    .meta span {
+      margin-right: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .rating {
+      margin: 10px 0;
+      color: #f4b400;
+    }
+
+    .description {
+      margin: 15px 0;
+    }
+
+    .stats {
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .stats span {
+      margin-right: 15px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      text-decoration: none;
+      border: none;
+    }
+
+    .download {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #fff;
+    }
+
+    .download:hover {
+      background: #1a252f;
+    }
+
+    .favorite {
+      background: #eee;
+    }
+
+    .favorite:hover {
+      color: red;
+    }
+
+    /* COMMENTS SECTION */
+    .books-comments {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .comments-panel {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .comments-panel h2 {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    /* INPUT */
+    .add-comment {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .add-comment input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .add-comment input:focus {
+      border-color: #2c3e50;
+    }
+
+    .add-comment button {
+      background: #2c3e50;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .add-comment button:hover {
+      background: #34495e;
+    }
+
+    /* COMMENTS */
+    .comments-list {
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .comment {
+      background: #f4f4f9;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .comment:hover {
+      transform: translateY(-2px);
+      background: #e9eef7;
+    }
+
+    .comment h3 {
+      font-size: 15px;
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+
+    .comment p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width: 768px) {
+      .details-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .add-comment {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+<nav>
+  <h1><i class="fa-solid fa-book"></i> E-Library</h1>
+
+  <ul>
+    <li>
+      <a href="index.html" class="active">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+    </li>
+
+    <li>
+      <a href="books.html">
+        <i class="fa-solid fa-book-open"></i> Books
+      </a>
+    </li>
+
+    <li>
+      <a href="about.html">
+        <i class="fa-solid fa-circle-info"></i> About
+      </a>
+    </li>
+
+    <li>
+      <a href="register.html">
+        <i class="fa-solid fa-user-plus"></i> Register
+      </a>
+    </li>
+
+    <li>
+      <a href="login.html">
+        <i class="fa-solid fa-right-to-bracket"></i> Login
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <!-- BOOK DETAILS -->
+  <section class="book-details">
+
+    <div class="details-card">
+
+      <div class="details-image">
+        <img src="images/csharp.jpg" alt="Book">
+      </div>
+
+      <div class="details-info">
+
+        <h2><i class="fa-solid fa-book"></i> C# Programming</h2>
+
+        <div class="meta">
+          <span><i class="fa-solid fa-user"></i> Bob James</span>
+          <span><i class="fa-solid fa-layer-group"></i> Programming</span>
+          <span><i class="fa-solid fa-calendar"></i> 2020</span>
+        </div>
+
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <span>(4.0)</span>
+        </div>
+
+        <p class="description">
+          This book provides a complete introduction to C# programming.
+          Learn object-oriented programming and build real-world applications.
+        </p>
+
+        <div class="stats">
+          <span><i class="fa-solid fa-eye"></i> 1,245 views</span>
+          <span><i class="fa-solid fa-comments"></i> 32 comments</span>
+        </div>
+
+        <div class="actions">
+          <a href="#" class="btn download">
+            <i class="fa-solid fa-download"></i> Download
+          </a>
+
+          <a href="#" class="btn download">
+            <i class="fa-solid fa-eye"></i> Open
+          </a>
+
+          <button class="btn favorite">
+            <i class="fa-solid fa-heart"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- COMMENTS -->
+  <section class="books-comments">
+
+    <div class="comments-panel">
+
+      <h2><i class="fa-solid fa-comments"></i> Comments</h2>
+
+      <!-- INPUT -->
+      <div class="add-comment">
+        <input type="text" placeholder="Write a comment..." id="commentInput">
+        <button onclick="addComment()">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+
+      <!-- LIST -->
+      <div class="comments-list" id="commentList">
+
+        <div class="comment">
+          <h3><i class="fa-solid fa-user"></i> Andrew Benson</h3>
+          <p>I loved this book! Very easy to understand.</p>
+        </div>
+
+        <div class="comment">
+          <h3><i class="fa-solid fa-user"></i> Sarah Kim</h3>
+          <p>Great explanations of C# concepts.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><i class="fa-solid fa-book"></i> E-Library</p>
+    <p>&copy; <span id="year"></span> All rights reserved.</p>
+  </footer>
+
+
+</body>
+</html>

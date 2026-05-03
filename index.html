@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Library</title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+  <h1><i class="fa-solid fa-book"></i> E-Library</h1>
+
+  <ul>
+    <li>
+      <a href="index.html" class="active">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+    </li>
+
+    <li>
+      <a href="books.html">
+        <i class="fa-solid fa-book-open"></i> Books
+      </a>
+    </li>
+
+    <li>
+      <a href="about.html">
+        <i class="fa-solid fa-circle-info"></i> About
+      </a>
+    </li>
+
+    <li>
+      <a href="register.html">
+        <i class="fa-solid fa-user-plus"></i> Register
+      </a>
+    </li>
+
+    <li>
+      <a href="login.html">
+        <i class="fa-solid fa-right-to-bracket"></i> Login
+      </a>
+    </li>
+  </ul>
+</nav>
+  
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Our E-Library</h2>
+    <p>Discover a world of books at your fingertips. Browse, read, and download your favorite titles anytime, anywhere.</p>
+  </section>
+
+  <!-- Featured Books -->
+  <section class="featured">
+    <h3><i class="fa-solid fa-arrow-trend-up trending"></i>
+      Featured Books</h3>
+    <div class="book-grid">
+
+      <div class="book-card">
+        <img src="images/Iot2.jpg" alt="Internet of Things Basics Book">
+        <h4>Internet of Things Basics</h4>
+        <p>Russell Noriis</p>
+        <a href="book2.html">View Details</a>
+      </div>
+
+      <div class="book-card">
+        <img src="images/trump.jpg" alt="Geopolitics Book">
+        <h4>GeoPolitics</h4>
+        <p>James faith</p>
+        <a href="book3.html">View Details</a>
+      </div>
+
+      <div class="book-card">
+        <img src="images/hitler.jpg" alt="C# Programming Book">
+        <h4>History</h4>
+        <p>Arthur Keneddy</p>
+        <a href="book1.html">View Details</a>
+      </div>
+
+      <div class="book-card">
+        <img src="images/csharp.jpg" alt="C# Programming Book">
+        <h4>C# Programming</h4>
+        <p>Bob james</p>
+        <a href="viewdetails.html">View Details</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+   <p> &copy; <span id="year"></span> E-Library. All rights reserved.</p>
+<p style="color:red; font-weight:bold;">
+    Developed by: Zakariye Mohamed Ali
+</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
